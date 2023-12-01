@@ -1,5 +1,87 @@
-<script src="./js/jquery.min.js"></script>
-<script src="./js/jquery.fancybox.min.js"></script>
-<script src="./js/slick.min.js"></script>
-<script src="./js/jquery.maskedinput.min.js"></script>
-<script src="./js/scripts.js"></script>
+
+<script src="./index_files/jquery.maskedinput.min.js"></script>
+<script src="./index_files/slick.min.js"></script>
+<script src="./index_files/script.js"></script>
+<script src="./index_files/jquery-ui.js"></script>
+<script src="./index_files/scripts.js"></script>
+
+<script>
+	
+	$(window).on('load', function () {
+		/*function changeHeight(id) {
+			let elem = document.getElementById(id)
+			elem.style.height = elem.scrollHeight;
+			console.log("Current Scroll Height: "+elem.scrollHeight)
+			console.log("New Height: "+elem.style.height)
+			console.log(elem)
+		}
+		document.getElementById("editor").addEventListener("change", changeHeight("editor"));
+		changeHeight("editor")*/
+		
+		
+		//srt-slider-section-box
+		if (!!$('.srt-slider-section-box').offset()) {
+			$('.srt-slider-section-box .slider').slick({
+				dots: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				variableWidth: true,
+				infinite: true,
+				adaptiveHeight: false,
+				rows: 1,
+				swipeToSlide: true,
+				autoplay: false,
+				autoplaySpeed: 5000,
+				prevArrow: false,
+				nextArrow: false,
+			});
+
+		}
+
+
+		//reviews-section-box
+		if (!!$('.reviews-section-box').offset()) {
+			$('.reviews-section-box .slider').slick({
+				dots: true,
+				slidesToShow: 1,
+				variableWidth: true,
+				infinite: true,
+				adaptiveHeight: false,
+				rows: 1,
+				swipeToSlide: true,
+				autoplay: false,
+				autoplaySpeed: 5000,
+				prevArrow: false,
+				nextArrow: false,
+				centerMode: true,
+				responsive: [
+					{
+						breakpoint: 993,
+						settings: {
+							slidesToShow: 2,
+							variableWidth: false,
+							centerMode: false,
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 2,
+							variableWidth: false,
+							centerMode: false,
+						}
+					},
+					{
+						breakpoint: 640,
+						settings: {
+							slidesToShow: 1,
+							variableWidth: false,
+							centerMode: false,
+						}
+					},
+				]
+			});
+
+		}
+	});
+</script>

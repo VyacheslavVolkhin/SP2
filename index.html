@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Готовые решения</title>
+    <meta name="title" content="Готовые решения">
+    <meta property="og:title" content="Готовые решения">
+    <meta name="description" content="Готовые решения">
+    <meta property="og:description" content="Готовые решения">
+
+    <link rel="stylesheet" href="./index_files/style.css">
+    <link rel="stylesheet" href="./index_files/style_2.css">
+    <link rel="stylesheet" href="./index_files/animate.min.css">
+    <link rel="stylesheet" href="./index_files/magnific-popup.css">
+    <link rel="stylesheet" href="./index_files/slick.css">
+    <link rel="stylesheet" href="./index_files/slick-theme.css">
+    <link rel="stylesheet" href="./index_files/jquery-ui.css">
+
+    <script src="./index_files/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="./index_files/daterangepicker.css">
+
+    <meta name="csrf-token" content="pMi6NaWsY913UuYUl0mFtdZ45SgoqTfvlLlDHiT2">
+
+    <meta name="yandex-verification" content="e2bb82c28e11c6fa">
+
+    <link rel="stylesheet" href="./index_files/style(1).css">
+
+    <style>
+        @media (min-width: 1600px) {
+            .containerS {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        @media (min-width: 993px) {
+            .side-wrap {
+                width: 331px;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./index_files/widget.css" class="jv-css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="wrap">
+
+
+        <!-- header -->
+        <header class="header">
+            <div class="inner-wrap">
+                44444
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- page -->
+        <div class="page-full">
+            <br><br><br><br><br>
+            <ul>
+                333
+                <li>--------</li>
+            </ul>
+            <br><br><br><br><br>
+        </div>
+        <!-- /page -->
+
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="inner-wrap">
+                333333
+            </div>
+        </footer>
+        <!-- /footer -->
+
+    </div>
+    <!-- /wrap -->
+
+
+    <script src="./index_files/jquery.maskedinput.min.js"></script>
+    <script src="./index_files/slick.min.js"></script>
+    <script src="./index_files/script.js"></script>
+    <script src="./index_files/jquery-ui.js"></script>
+    <script src="./index_files/scripts.js"></script>
+
+    <script>
+        $(window).on('load', function() {
+            /*function changeHeight(id) {
+            	let elem = document.getElementById(id)
+            	elem.style.height = elem.scrollHeight;
+            	console.log("Current Scroll Height: "+elem.scrollHeight)
+            	console.log("New Height: "+elem.style.height)
+            	console.log(elem)
+            }
+            document.getElementById("editor").addEventListener("change", changeHeight("editor"));
+            changeHeight("editor")*/
+
+
+            //srt-slider-section-box
+            if (!!$('.srt-slider-section-box').offset()) {
+                $('.srt-slider-section-box .slider').slick({
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    infinite: true,
+                    adaptiveHeight: false,
+                    rows: 1,
+                    swipeToSlide: true,
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    prevArrow: false,
+                    nextArrow: false,
+                });
+
+            }
+
+
+            //reviews-section-box
+            if (!!$('.reviews-section-box').offset()) {
+                $('.reviews-section-box .slider').slick({
+                    dots: true,
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    infinite: true,
+                    adaptiveHeight: false,
+                    rows: 1,
+                    swipeToSlide: true,
+                    autoplay: false,
+                    autoplaySpeed: 5000,
+                    prevArrow: false,
+                    nextArrow: false,
+                    centerMode: true,
+                    responsive: [{
+                            breakpoint: 993,
+                            settings: {
+                                slidesToShow: 2,
+                                variableWidth: false,
+                                centerMode: false,
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2,
+                                variableWidth: false,
+                                centerMode: false,
+                            }
+                        },
+                        {
+                            breakpoint: 640,
+                            settings: {
+                                slidesToShow: 1,
+                                variableWidth: false,
+                                centerMode: false,
+                            }
+                        },
+                    ]
+                });
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>
