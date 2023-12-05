@@ -25,6 +25,49 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.white-popup-block {
+  background: #fff;
+  width: 600px;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 100%;
+  font-size: 16px;
+  position: relative;
+}
+.white-popup-block .popup-modal-dismiss {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+}
+.frm-popup .popup-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.frm-popup .btns.btns__page {
+  width: 100%;
+  min-width: 0;
+  padding: 0 24px;
+}
+.field-button-hidden .btns {
+  display: none;
+}
+.field-button-hidden .btns.button-action {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.field-button-hidden .btns.button-action.active {
+  display: none;
+}
+.field-button-hidden .btns.button-action.active ~ .btns {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
 .form-page {
   margin-bottom: 50px;
   font-size: 14px;
@@ -635,6 +678,36 @@ textarea.inputs.inputs__border.inputs__border-second {
 .btn-action-ico.ico-edit:before {
   background-image: url(../img/icons/edit.svg);
   background-size: 21px auto;
+}
+.btn-action-ico.ico-close:before,
+.btn-action-ico.ico-close:after {
+  width: 16px;
+  height: 2px;
+  background: #000;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin: -1px 0 0 -8px;
+  transition: all ease 0.2s;
+  transform: rotate(45deg);
+}
+.btn-action-ico.ico-close:before {
+  transform: rotate(-45deg);
+}
+.btn-action-ico.ico-close:hover:before,
+.btn-action-ico.ico-close:hover:after {
+  background-color: #D0A144;
+}
+@media (max-width: 479px) {
+  .white-popup-block {
+    width: 320px;
+    padding: 20px;
+    font-size: 14px;
+  }
+  .frm-popup .popup-title {
+    font-size: 20px;
+  }
 }
 @media (min-width: 640px) {
   .form-page .field-select {
@@ -1281,6 +1354,15 @@ textarea.inputs.inputs__border.inputs__border-second {
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.items-wrap .wrap-hidden {
+  display: none;
+}
+.items-wrap.show-all .item-wrap.wrap-hidden {
+  display: block;
+}
+.items-wrap.show-all ~ .more-box {
+  display: none;
+}
 .profile-box,
 .profile-menu-box {
   display: block;

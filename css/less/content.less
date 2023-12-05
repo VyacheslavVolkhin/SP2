@@ -1,6 +1,19 @@
 /* ----------------------------------- *\
 			content styles
 \* ----------------------------------- */
+.items-wrap {
+    .wrap-hidden {
+        display: none;
+    }
+}
+.items-wrap.show-all {
+    .item-wrap.wrap-hidden {
+        display: block;
+    }
+    &~.more-box {
+        display: none;
+    }
+}
 .profile-form-box {
     
 }

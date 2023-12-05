@@ -89,10 +89,12 @@
     <!-- /wrap -->
 
 
+    <script src="https://smartpravo.com/front_user/js/jquery.magnific-popup.min.js"></script>
     <script src="./index_files/jquery.maskedinput.min.js"></script>
     <script src="./index_files/slick.min.js"></script>
     <script src="./index_files/script.js"></script>
     <script src="./index_files/jquery-ui.js"></script>
+    <script src="./js/jquery.swipebox.min.js"></script>
     <script src="./index_files/scripts.js"></script>
 
     <script>
@@ -107,6 +109,45 @@
             document.getElementById("editor").addEventListener("change", changeHeight("editor"));
             changeHeight("editor")*/
 
+            //map popup
+            $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+
+                fixedContentPos: false
+            });
+
+
+            //image popup
+            $('.image-popup-no-margins').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                closeBtnInside: false,
+                fixedContentPos: true,
+                mainClass: 'mfp-no-margins mfp-with-zoom',
+                image: {
+                    verticalFit: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300
+                }
+            });
+
+
+            $('.more-box .btns').on('click', function() {
+                $(this).parents('.containerS').find('.items-wrap').addClass('show-all');
+                return false;
+            })
+
+            $('.field-button-hidden .button-action').on('click', function() {
+                $(this).toggleClass('active');
+                return false;
+            })
+
 
             //srt-slider-section-box
             if (!!$('.srt-slider-section-box').offset()) {
@@ -119,8 +160,8 @@
                     adaptiveHeight: false,
                     rows: 1,
                     swipeToSlide: true,
-                    autoplay: false,
-                    autoplaySpeed: 5000,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                     prevArrow: false,
                     nextArrow: false,
                 });
@@ -138,8 +179,8 @@
                     adaptiveHeight: false,
                     rows: 1,
                     swipeToSlide: true,
-                    autoplay: false,
-                    autoplaySpeed: 5000,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                     prevArrow: false,
                     nextArrow: false,
                     centerMode: true,

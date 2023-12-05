@@ -1,6 +1,51 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.white-popup-block {
+    background: #fff;
+    width: 600px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 100%;
+    font-size: 16px;
+    position: relative;
+    .popup-modal-dismiss {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        z-index: 10;
+        width: 24px;
+        height: 24px;
+    }
+}
+.frm-popup {
+    .popup-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .btns.btns__page {
+        width: 100%;
+        min-width: 0;
+        padding: 0 24px;
+    }
+}
+.field-button-hidden {
+    .btns {
+        display: none;
+        &.button-action {
+            display: inline-flex;
+            &.active {
+                display: none;
+                &~.btns {
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}
 .form-page {
     .frm-field-textfield {
         border: none;
@@ -579,6 +624,40 @@ textarea.inputs.inputs__border.inputs__border-second {
         &:before {
             background-image: url(../img/icons/edit.svg);
             background-size: 21px auto;
+        }
+    }
+    &.ico-close {
+        &:before, &:after {
+            width: 16px;
+            height: 2px;
+            background: #000;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+            margin: -1px 0 0 -8px;
+            transition: all ease 0.2s;
+            transform: rotate(45deg);
+        }
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            &:before, &:after {
+                background-color: #D0A144;
+            }
+        }
+    }
+}
+@media (max-width: 479px) {
+    .white-popup-block {
+        width: 320px;
+        padding: 20px;
+        font-size: 14px;
+    }
+    .frm-popup {
+        .popup-title {
+            font-size: 20px;
         }
     }
 }
